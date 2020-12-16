@@ -1,11 +1,15 @@
-import React from 'react';
+import React , { Component } from 'react';
 
 import './CounterControl.css';
 
-const counterControl = (props) => (
-    <div className="CounterControl" onClick={props.clicked}>
-        {props.label}
-    </div>
-);
+class counterControl extends Component {
+    render() {
+        return (
+            <div className="CounterControl" onClick={this.props.clicked}>
+                {this.props.label}
+            </div>
+        );
+    }
+}
 
 export default counterControl;
